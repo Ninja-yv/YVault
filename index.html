@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>YVault</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <div id="loginSection">
+      <h1>YVault</h1>
+      <div class="login-form">
+        <input type="password" id="masterPassword" placeholder="Enter Master Password">
+        <div id="confirmSection" style="display: none;">
+          <input type="password" id="confirmPassword" placeholder="Confirm Master Password">
+        </div>
+        <div id="passwordRequirements" class="requirements">
+          <small>Password must have:</small>
+          <ul>
+            <li>At least 12 characters</li>
+            <li>Uppercase & lowercase letters</li>
+            <li>Numbers</li>
+            <li>Special characters</li>
+          </ul>
+        </div>
+        <button onclick="authenticate()">Access Vault</button>
+        <button onclick="showForgotPassword()" class="forgot-btn">Forgot Password?</button>
+      </div>
+    </div>
+    
+    <div id="securityQuestions" style="display: none;">
+      <h2>Security Questions Setup</h2>
+      <select id="question1">
+        <option value="pet">What was your first pet's name?</option>
+        <option value="city">In which city were you born?</option>
+        <option value="school">What was your first school's name?</option>
+      </select>
+      <input type="text" id="answer1" placeholder="Answer">
+      
+      <select id="question2">
+        <option value="mother">What is your mother's maiden name?</option>
+        <option value="car">What was your first car?</option>
+        <option value="food">What is your favorite food?</option>
+      </select>
+      <input type="text" id="answer2" placeholder="Answer">
+      <button onclick="saveSecurityQuestions()">Save Questions</button>
+    </div>
+    
+    <div id="forgotPassword" style="display: none;">
+      <h2>Password Recovery</h2>
+      <div id="securityQuestionsCheck"></div>
+      <button onclick="verifyAnswers()">Verify Answers</button>
+      <button onclick="backToLogin()" class="back-btn">Back to Login</button>
+    </div>
+    
+    <div id="vaultSection" style="display: none;">
+      <div class="header">
+        <h2>YVault Dashboard</h2>
+        <button onclick="showAddForm()">+ Add Password</button>
+      </div>
+      
+      <div id="addForm" style="display: none;">
+        <input type="text" id="siteName" placeholder="Site Name">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="savePassword()">Save</button>
+      </div>
+      
+      <div id="passwordList"></div>
+    </div>
+  </div>
+  <div class="cyber-background"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+    
