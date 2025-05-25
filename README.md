@@ -1,90 +1,104 @@
-# YVault - Secure Password Manager
+/\ \  _ \ \   /\  __ \   /\ \       /\ \       /\  \   /\ \   /\  == 
+\ \ / ".\ \  \ \  __ \  \ \ _  \ \ ____  \ ___  \  \ \ \  \ \  < \ _/".~_\  \ _\ _\  \ _\  \ _\  /_\  \ _\  \ _\ _
+//   //   ///_/   //   //   /___/   //   // /_/
 
-**YVault** is a lightweight, client-side password manager built using HTML, CSS, and JavaScript. It allows users to store, view, and manage login credentials securely in their browser using encryption powered by CryptoJS. This project was created by **Yash** and is hosted for free on GitHub Pages.
+Y V A U L T   |   e n c r y p t . a n d . o w n
 
----
-
-## 🔐 Features
-
-- Master password setup and authentication
-- Client-side AES encryption using CryptoJS
-- Add, edit, delete, and view saved login credentials
-- Strong password validation rules
-- Security questions for master password recovery
-- Neon cyberpunk-themed responsive UI
-- 100% offline and privacy-respecting (no servers involved)
+<p align="center">
+  <img src="logo.svg" width="220" alt="YVault Logo">
+</p>
 
 ---
 
-## 🚀 Live Demo
+## ⚡ FEATURES
 
-Access it here:  
-**[https://ninja-yv.github.io/yvault/](https://ninja-yv.github.io/yvault/)**
-
----
-
-## 🛠️ Built With
-
-- **HTML5** – Structure
-- **CSS3** – Styling and animations
-- **JavaScript (Vanilla)** – Functionality
-- **[CryptoJS](https://github.com/brix/crypto-js)** – Encryption
-- **GitHub Pages** – Free hosting
+- Set a secure master password (encrypted, not stored)
+- Add / View / Edit / Delete saved login credentials
+- AES-256 encryption via CryptoJS
+- Offline-first: all data stays on your device
+- Local password recovery using security questions
+- Cyberpunk / hacker terminal-style interface
+- No server. No tracking. No nonsense.
 
 ---
 
-## 🧪 How to Run Locally
+## 🧪 TECH STACK
 
-1. **Clone the repository:**
+- `HTML5`  
+- `CSS3` (dark theme + neon animations)  
+- `JavaScript (Vanilla)`  
+- `CryptoJS` for encryption  
+- `GitHub Pages` for zero-cost deployment  
 
-   ```bash
-   git clone https://github.com/Ninja/yvault.git
+---
 
-2. Open the app:
+## 🚀 DEMO
 
-Open the index.html file in your browser directly.
+Access the live app here:  
+**[https://ninja.github.io/yvault/](https://ninja.github.io/yvault/)**
 
-> You can also use Live Server (VS Code) or drag the file into your browser.
+> Works best on modern browsers with JavaScript enabled.
+
+---
+
+## ⚠️ SECURITY NOTES
+
+- Everything is stored in `localStorage` — your data stays **in your browser**.
+- The master password is hashed using PBKDF2 with a salt.
+- Vault entries are AES-encrypted with your password key.
+- If you forget both your master password **and** your recovery answers:  
+  **Game over. Vault data is unrecoverable.**
+
+---
+
+## ⛓️ SETUP (FOR HACKERS)
+
+Clone and run it locally:
+
+```bash
+git clone https://github.com/Ninja/yvault.git
+cd yvault
+# Just open index.html in your browser
+
+No build tools. No dependencies. Just static files.
 
 
+---
 
+☠️ KNOWN LIMITATIONS
+
+No sync or cloud backup
+
+Only works in one browser/device
+
+UI built for fun, not perfection
+
+No password generation (yet)
 
 
 
 ---
 
-⚠️ Important Notes
+💀 FUTURE PLANS
 
-All your data is stored in your browser’s localStorage.
-
-Your vault and master password never leave your device.
-
-If you lose both your master password and your security answers, recovery is impossible.
-
-
-
----
-
-✅ To-Do / Improvements
-
-Add search functionality to filter passwords
+Add search/filter to entries
 
 Import/export encrypted vault backups
 
 Password strength meter
 
-Optional dark/light theme switch
+Custom themes: CRT, Plasma, Terminal Green
 
 
 
 ---
 
-📄 License
+LICENSE
 
-This project is licensed under the MIT License.
-Feel free to use, modify, and share it.
+MIT License — use it, fork it, break it, improve it.
+
+> Welcome to the vault. Guard your secrets well.
+
 
 
 ---
-
-> Created with passion by Yash
