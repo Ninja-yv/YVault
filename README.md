@@ -102,3 +102,5 @@ MIT License — use it, fork it, break it, improve it.
 
 
 ---
+
+Made with passion by **Yash**
